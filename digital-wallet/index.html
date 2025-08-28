@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💰 Digital Wallet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Digital Wallet</h1>
+
+    <!-- Form Input -->
+    <form id="transaction-form" class="transaction-form">
+      <input type="date" id="date" required>
+      <input type="text" id="description" placeholder="Keterangan" required>
+      <input type="number" id="amount" placeholder="Jumlah (Rp)" required>
+      <select id="type">
+        <option value="income">Pemasukan</option>
+        <option value="expense">Pengeluaran</option>
+      </select>
+      <button type="submit">Tambah</button>
+    </form>
+
+    <!-- Ringkasan -->
+    <div class="summary">
+      <p><strong>Total Pemasukan:</strong> <span id="total-income">Rp 0</span></p>
+      <p><strong>Total Pengeluaran:</strong> <span id="total-expense">Rp 0</span></p>
+      <p><strong>Saldo:</strong> <span id="balance">Rp 0</span></p>
+    </div>
+
+    <!-- Export Import -->
+    <div class="buttons">
+      <button id="export-json">Export JSON</button>
+      <input type="file" id="file-input">
+      <button id="import-json">Import JSON</button>
+    </div>
+
+    <!-- List Transaksi -->
+    <ul id="transaction-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
